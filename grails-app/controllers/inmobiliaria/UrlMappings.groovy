@@ -1,4 +1,4 @@
-package programacion3
+package inmobiliaria
 
 class UrlMappings {
 
