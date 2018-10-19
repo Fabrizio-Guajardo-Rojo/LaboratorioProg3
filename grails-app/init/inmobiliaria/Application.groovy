@@ -1,4 +1,4 @@
-package programacion3
+package inmobiliaria
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
