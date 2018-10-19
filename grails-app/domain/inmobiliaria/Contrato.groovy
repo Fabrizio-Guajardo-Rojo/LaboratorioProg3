@@ -10,5 +10,9 @@ class Contrato {
 
 
     static constraints = {
+    	descripcion (blank:false , maxSize:50)
+    	importe (min:0)
+    	fecha (min: new Date() )
+
     }
 }
