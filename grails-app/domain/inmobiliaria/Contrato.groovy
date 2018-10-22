@@ -7,7 +7,9 @@ class Contrato {
 	String descripcion;
 	float importe;
 	Date fecha;
-
+//static belongsTo = [cliente_dueño: Cliente] // el dueñño de la propiedad
+//static belongsTo = [cliente_comprador: Cliente] // el cliente de la propiedad
+static belongsTo = [propiedad: Propiedad] // la propiedad en cuestion
 
     static constraints = {
     	descripcion (blank:false , maxSize:50)
