@@ -6,7 +6,7 @@ class Usuario {
     String apellido
     String password
     String tipo_usuario
-    String email
+    String email_usuario
 
     static hasMany = [contratos: Contrato]
 
@@ -14,8 +14,8 @@ class Usuario {
       nombre_usuario (size: 5..15, blank: false, unique: true)
       nombre (blank:false, maxSize:50)
       apellido (blank:false, maxSize:20)
-      tipo_usuario(blank:false, inList:['administrador','operador'])
+      tipo_usuario(blank:false, inList:['Administrador','Operador'])
       password (size: 5..15, blank: false)
-      email (email: true, blank: false)
+      email_usuario (email: true, blank: false)
     }
 }
