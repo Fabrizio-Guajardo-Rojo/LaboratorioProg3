@@ -8,7 +8,10 @@ class Cliente {
     BigDecimal dni_cliente
     String domicilio_cliente
     String telefono_cliente
-    List rol_cliente = []
+    String tipo_cliente
+
+    static hasMany = [propiedades: Propiedad , contratos: Contrato]
+
 
     static constraints = {
     }
