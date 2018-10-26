@@ -5,20 +5,20 @@
         <title>Inmobiliaria</title>
     </head>
     <body>
-        <content tag="nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio </a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Propiedades </a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contacto </a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Iniciar Sesion </a>
-            </li>
-        </content>
+      <content tag="nav">
+          <li class="dropdown">
+            <g:link url="[action:'index',controller:'principal']">Inicio </g:link>
+          </li>
+          <li class="dropdown">
+              <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
+          </li>
+          <li class="dropdown">
+              <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
+          </li>
+          <li class="dropdown">
+              <g:link url="[action:'sesion',controller:'principal']">Inicio Sesion </g:link> </a>
+          </li>
+      </content>
 
 
         <div class="jumbotron">
@@ -45,7 +45,7 @@
             <br><br>
               <label for="detalle_formulario">Mensaje / Consulta:</label><textarea class="form-control" rows="5" id="detalle_formulario" name="detalle_formulario"></textarea>
             </g:form>
-
+            <g:submitButton name="create" class="save"
           </div>
         </div><br>
 

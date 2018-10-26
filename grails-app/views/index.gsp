@@ -7,16 +7,16 @@
     <body>
         <content tag="nav">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio </a>
+              <g:link url="[action:'index',controller:'principal']">Inicio </g:link>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Propiedades </a>
+                <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
             </li>
             <li class="dropdown">
                 <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Iniciar Sesion </a>
+                <g:link url="[action:'sesion',controller:'principal']">Inicio Sesion </g:link> </a>
             </li>
         </content>
 
