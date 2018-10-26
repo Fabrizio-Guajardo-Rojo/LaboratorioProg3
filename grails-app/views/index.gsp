@@ -13,7 +13,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Propiedades </a>
             </li>
             <li class="dropdown">
-                <g:link url="[action:'contacto',controller:'ControladoresController']">Contacto </g:link>
+                <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Iniciar Sesion </a>

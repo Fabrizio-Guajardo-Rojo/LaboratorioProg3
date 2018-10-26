@@ -1,6 +1,6 @@
 package inmobiliaria
 
-class ControladoresController {
+class PrincipalController {
 
 
   def contacto(){
