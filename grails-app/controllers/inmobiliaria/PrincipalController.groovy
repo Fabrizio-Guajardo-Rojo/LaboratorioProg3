@@ -3,7 +3,7 @@ package inmobiliaria
 class PrincipalController {
 
   def index() {
-    render(view: "index")
+    render(view: "/index")
   }
 
   def contacto(){

@@ -1,9 +1,9 @@
 package inmobiliaria
 
-import grails.testing.web.controllers.ControllerUnitTest
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class ControladoresControllerSpec extends Specification implements ControllerUnitTest<ControladoresController> {
+class PrincipalServiceSpec extends Specification implements ServiceUnitTest<PrincipalService>{
 
     def setup() {
     }

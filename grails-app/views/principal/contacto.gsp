@@ -1,5 +1,5 @@
 <!doctype html>
-    <html>
+<html>
     <head>
         <meta name="layout" content="main"/>
         <title>Inmobiliaria</title>
@@ -31,7 +31,7 @@
         <div class="container-fluid bg-3 text-center">
           <h2>Formulario de Contacto</h2><br>
           <div class="row">
-            <g:form name="formularioContato" url="[controller:'#',action:'#']">
+            <g:form name="formularioContacto" action="contacto">
             <br><br>
               <label for="nombre_formulario">Nombre:</label> <input type="text" id="nombre_formulario" name="nombre_formulario"/>
             <br><br>
@@ -45,12 +45,14 @@
             <br><br>
               <label for="detalle_formulario">Mensaje / Consulta:</label> <textarea class="form-control" rows="5" id="detalle_formulario" name="detalle_formulario"></textarea>
             <br><br>
+            <input type="submit" class="btn btn-default" name="enviar" value="Enviar Formulario"/>
+            <br><br>
             <button type="reset" class="btn btn-default">Borrar Datos<button/>
             </g:form>
           </div>
-          <g:submitButton name="create" class="save" value="Enviar Formulario"/>
-        </div><br>
+
+        </div>
 
 
     </body>
-    </html>
+</html>
