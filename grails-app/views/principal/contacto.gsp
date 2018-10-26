@@ -43,10 +43,12 @@
             <br><br>
               <label for="email_formulario">Email:</label> <input type="text" id="email_formulario" name="email_formulario"/>
             <br><br>
-              <label for="detalle_formulario">Mensaje / Consulta:</label><textarea class="form-control" rows="5" id="detalle_formulario" name="detalle_formulario"></textarea>
+              <label for="detalle_formulario">Mensaje / Consulta:</label> <textarea class="form-control" rows="5" id="detalle_formulario" name="detalle_formulario"></textarea>
+            <br><br>
+            <button type="reset" class="btn btn-default">Borrar Datos<button/>
             </g:form>
-            <g:submitButton name="create" class="save"
           </div>
+          <g:submitButton name="create" class="save" value="Enviar Formulario"/>
         </div><br>
 
 
