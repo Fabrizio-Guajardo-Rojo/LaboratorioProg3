@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+	<title>baja de cliente comprador</title>
+  </head>  
+
+
+  <body>
+	<h1><g:link action="index">baja de cliente comprador</g:link> - Baja</h1>
+  <table>
+    <tr>
+      <th>Codigo</th>
+      <th>nombre_cliente</th>
+      <th>apellido_cliente</th>
+    </tr>
+      <g:each in="${listado?}">
+          <tr>
+            <td><g:link action="darBaja_clienteComprador" id="${it.id}">${it.codigo}</g:link></td> <!-- definir precio -->
+            <td>${it.nombre_cliente}</td>
+            <td>${it.apellido_cliente}</td>
+          </tr>
+      </g:each>
+  </table>
+  </body>
+
+
+    
+</html>
