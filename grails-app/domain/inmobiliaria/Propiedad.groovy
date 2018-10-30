@@ -8,8 +8,8 @@ class Propiedad {
 	String descripcion;
 	String tipo_propiedad; // debe tener un tipo diferente para "casas (c),departamentos(d) , locales (l), etc"
 	String estado_propiedad; // si esta alquilada o vendida , o libre 
-	static belongsTo = [cliente_dueño: Cliente]  // falta agregar el "static hasMany = [propiedades: Propiedad]"
-	static hasMany = [contratos: Contrato]
+	static belongsTo = [cliente_dueño: ClienteVendedor]  // falta agregar el "static hasMany = [propiedades: Propiedad]"
+	
 
     static constraints = {
     

@@ -8,7 +8,7 @@ class Usuario {
     String tipo_usuario
     String email_usuario
 
-    static hasMany = [contratos: Contrato]
+    //static hasMany = [contratos: Contrato]
 
     static constraints = {
       nombre_usuario (size: 5..15, blank: false, unique: true)
