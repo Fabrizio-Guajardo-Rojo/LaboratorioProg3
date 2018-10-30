@@ -8,12 +8,14 @@ def index() {
   render(view: "/index")
 }
 
+
+
 def propiedades(){
   render (view: "Propiedades")
 }
 
 def sesion(){
-  render (view: "sesion")
+  render (view: "opcionesGenerales")
 }
 
 //FORMULARIO
