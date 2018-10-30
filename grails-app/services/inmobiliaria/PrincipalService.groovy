@@ -6,7 +6,8 @@ import grails.gorm.transactions.Transactional
 class PrincipalService {
 
 
-    def serviceMethod() {
+  void altaContacto(Map params) {
+    def contacto = new Formulario(params).save(flush:true)
+  }
 
-    }
 }
