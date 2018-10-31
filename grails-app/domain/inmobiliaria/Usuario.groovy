@@ -1,21 +1,63 @@
 package inmobiliaria
 
-class Usuario {
-    String nombre_usuario
-    String nombre
-    String apellido
-    String password
-    String tipo_usuario
-    String email_usuario
+import java.security.MessageDigest
 
-    //static hasMany = [contratos: Contrato]
+class Usuario implements Serializable {
 
-    static constraints = {
-      nombre_usuario (size: 5..15, blank: false, unique: true)
-      nombre (blank:false, maxSize:50)
-      apellido (blank:false, maxSize:20)
-      tipo_usuario(blank:false, inList:['Administrador','Operador'])
-      password (size: 5..15, blank: false)
-      email_usuario (email: true, blank: false)
-    }
+    private static final long serialVersionUID = 1
+
+
+      String nombreUsuario
+      String password
+      String email
+
+      def generateMD5_A(String s){
+          return MessageDigest.getInstance("MD5").digest(s.bytes).encodeHex().toString()
+      }
+
+      boolean equals(otro) {
+        is(otro) || (otro instanceof Usuario && otro.email == email)
+      }
+
+
+      String toString() {
+        nombreUsuario
+      }
+
+      Set<Rol> getRoles() {
+
+                    if (nombreUsuario!=null) {
+                        UsuarioRol.findAllByUsuario(this)*.rol
+                    } else {
+                        new TreeSet<Rol>()
+                    }
+      }
+
+          Set<UsuarioRol> getUsuarioRol() {
+        UsuarioRol.findAllByUsuario(this)
+      }
+
+      def beforeInsert() {
+        password=generateMD5_A(password)
+
+      }
+
+      def beforeUpdate() {
+        if (isDirty('password')) {
+          password=generateMD5_A(password)
+        }
+      }
+
+            def beforeValidate() {
+                nombreUsuario=nombreUsuario?.toUpperCase()
+                email=email?.toLowerCase()
+
+            }
+
+      static constraints = {
+        nombreUsuario blank: false, unique: true
+        password blank: false
+        email blank: false, email: true, unique: true
+
+      }
 }

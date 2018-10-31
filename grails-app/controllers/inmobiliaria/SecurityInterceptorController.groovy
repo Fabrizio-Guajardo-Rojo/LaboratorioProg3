@@ -1,0 +1,7 @@
+package inmobiliaria
+
+class SecurityInterceptorController {
+
+
+
+}

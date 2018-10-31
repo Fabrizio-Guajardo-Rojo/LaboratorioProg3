@@ -16,7 +16,7 @@
                 <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
             </li>
             <li class="dropdown">
-                <g:link url="[action:'sesion',controller:'principal']">Inicio Sesion </g:link> </a>
+                <g:link url="[action:'login',controller:'login']">Inicio Sesion </g:link> </a>
             </li>
         </content>
 

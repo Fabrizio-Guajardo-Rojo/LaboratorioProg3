@@ -7,7 +7,7 @@
     <body>
     <content tag="nav">
         <li class="dropdown">
-            <g:link url="[action:'sesion',controller:'principal']">Cerrar Sesion </g:link> </a>
+            <g:link url="[action:'logout',controller:'login']">Cerrar Sesion </g:link> </a>
         </li>
     </content>
 
@@ -29,7 +29,7 @@
       <li><g:link controller="contrato" action="index">ABM CONTRATOS</g:link></li>
       <li><g:link controller="usuario" action="index">ABM USUARIOS </g:link></li>
       <li><g:link controller="formulario" action="index">Ver Consultas Pendientes</g:link></li>
-      
+
   </ul>
 
 
