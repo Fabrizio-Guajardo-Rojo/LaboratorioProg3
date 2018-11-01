@@ -12,12 +12,20 @@ class BootStrap {
         }
       }
 
-      def rol1 = new Rol(authority: "ADMIN")
+      def rol1 = new Rol(authority: "ADMINISTRADOR")
       if(!rol1.save(flush: true)) {
         rol1.errors.each{
           println it
         }
       }
+
+      def rol2 = new Rol(authority: "OPERADOR")
+      if(!rol2.save(flush: true)) {
+        rol2.errors.each{
+          println it
+        }
+      }
+
 
       def usuarioRol1 = new UsuarioRol(usuario: usuario1, rol: rol1)
       if(!usuarioRol1.save(flush: true)) {
