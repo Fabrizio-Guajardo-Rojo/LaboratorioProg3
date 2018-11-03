@@ -37,6 +37,7 @@
         </div>
     </div>
 
+
     <g:layoutBody/>
 
     <div class="footer" role="contentinfo"><h3>Laboratorio Programacion 3</h3></div>

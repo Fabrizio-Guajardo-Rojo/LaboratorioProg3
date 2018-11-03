@@ -14,7 +14,7 @@ def propiedades(){
   render (view: "Propiedades")
 }
 
-def sesion(){
+def opcionesGenerales(){
   render (view: "opcionesGenerales")
 }
 

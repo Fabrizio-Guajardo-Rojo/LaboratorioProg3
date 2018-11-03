@@ -34,6 +34,20 @@ class BootStrap {
         }
       }
 
+      def usuario2 = new Usuario(nombreUsuario: "Lucas" ,password: "12345",email: "lucas@gmail.com")
+      if(!usuario2.save(flush: true)) {
+        usuario2.errors.each{
+          println it
+        }
+      }
+
+      def usuarioRol2 = new UsuarioRol(usuario: usuario2, rol: rol2)
+      if(!usuarioRol2.save(flush: true)) {
+        usuarioRol2.errors.each{
+          println it
+        }
+      }
+
 
 
 
