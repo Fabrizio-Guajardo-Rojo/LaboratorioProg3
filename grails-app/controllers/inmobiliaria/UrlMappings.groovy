@@ -10,6 +10,7 @@ class UrlMappings {
         }
 
         "/"(view:"/index")
+        "/propiedadesInfo"(resources:"apiPropiedades")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

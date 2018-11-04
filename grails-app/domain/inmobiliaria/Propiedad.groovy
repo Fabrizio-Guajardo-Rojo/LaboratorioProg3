@@ -1,5 +1,6 @@
 package inmobiliaria
 
+
 class Propiedad {
 	//Cliente cliente;
 	 // solo tiene un dueño
@@ -14,7 +15,7 @@ class Propiedad {
 	String localidad;
 	String barrio;
 	BigDecimal precio;
-	
+
 
 	String calle;
 	Integer numeroCalle;
@@ -22,22 +23,22 @@ class Propiedad {
 	Integer piso;
 	Integer cantidadHabitaciones;
 	Integer cantidadBanios;
-	
+
 
 	String descripcion;
 	String tipo_operacion; // debe tener un tipo diferente para "casas (c),departamentos(d) , locales (l), etc"
-	String estado_propiedad; // si esta alquilada o vendida , o libre 
+	String estado_propiedad; // si esta alquilada o vendida , o libre
 	String tipo_publicidad;
 
 	static belongsTo = [cliente_dueño: ClienteVendedor , tipoPropiedad:TipoPropiedad ]  // falta agregar el "static hasMany = [propiedades: Propiedad]"
-	    
+
 
 	String toString (){
     	return this.nombre_propiedad + ". Tipo Propiedad:" + this.tipoPropiedad +".  Tipo operacion:"+ this.tipo_operacion
     }
 
     static constraints = {
-    nombre_propiedad(blank: false, unique: true)	
+    nombre_propiedad(blank: false, unique: true)
     localidad(blank:false)
     barrio(blank:false)
     precio(blank:false)
@@ -52,10 +53,10 @@ class Propiedad {
 
 
     descripcion (maxSize:500)
-    
+
     tipo_operacion(blank:false, inList:['venta','alquiler'])
     estado_propiedad(blank:false, inList:['disponible','no disponible'])
     tipo_publicidad(blank:false, inList:['no oferta','oferta'])
-   
+
    }
 }
