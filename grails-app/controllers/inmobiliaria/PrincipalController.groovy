@@ -44,7 +44,7 @@ class PrincipalController {
 
 
     def formularioPropiedad(){
-      render (view:"formularioPropiedad")
+      render (view: "formularioPropiedad")
     }
 
 }
