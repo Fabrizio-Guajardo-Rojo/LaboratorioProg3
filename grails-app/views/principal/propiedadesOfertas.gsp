@@ -51,59 +51,65 @@
       </content>
     </g:else>
 
+
         <div class="jumbotron">
           <div class="container text-center">
             <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
             <p>Some text that represents "Me"...</p>
+
           </div>
         </div>
 
-        <div class="container-fluid bg-3 text-center">
-          <h3>Lista de Ofertas !!!</h3><br>
-          <div class="row">
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <div class="thumbnail">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" style="height:100%">
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="thumbnail">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" style="height:100%">
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-          </div>
-        </div><br>
+
+
+
+
 
         <div class="container-fluid bg-3 text-center">
-          <div class="row">
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+
+        <g:form action="propiedadesBarrioLocalidadOferta" class="form-wrap mt-4">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
+                <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
+                <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
+                <g:submitButton name="submit" class="btn-form" value="Buscar"/>
             </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-          </div>
-        </div><br><br>
+          </g:form>
+        <br><br>
+
+        <table>
+            <tr>
+                <td>Propiedad</td>
+                <td>Localidad</td>
+                <td>Barrio</td>
+                <td>Precio</td>
+                <td>Descripcion</td>
+                <td>Tipo Operacion</td>
+                <td>Tipo Propiedad</td>
+
+            </tr>
+            <g:each in="${listado?}">
+            <tr>
+
+                  <td><g:link action="formularioPropiedad" controller="principal"> ${it.nombre_propiedad}</g:link></td>
+                  <td>${it.localidad}</td>
+                  <td>${it.barrio}</td>
+                  <td>${it.precio}</td>
+                  <td>${it.descripcion}</td>
+                  <td>${it.tipo_operacion}</td>
+                  <td>${it.tipoPropiedad.nombre_tipo}</td>
+
+            </tr>
+            </g:each>
+        </table>
+
+
+
+
+        </div><br>
+
+
+
 
     </body>
     </html>

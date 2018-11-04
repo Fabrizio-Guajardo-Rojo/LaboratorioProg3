@@ -17,7 +17,7 @@
               <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
           </li>
           <li>
-              <g:link url="[action:'#',controller:'#']">Ofertas </g:link>
+              <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
           </li>
           <li>
               <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
@@ -40,7 +40,7 @@
             <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
         </li>
         <li>
-            <g:link url="[action:'#',controller:'#']">Ofertas </g:link>
+            <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
         </li>
         <li class="dropdown">
             <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
@@ -59,12 +59,52 @@
         </div>
 
 
-        <div class="container-fluid bg-3 text-center">
+        <!--aqui es una tabla de todas las propiedades  -->
+              <div class="container-fluid bg-3 text-center">
+
+                <g:form action="propiedadesBarrioLocalidad" class="form-wrap mt-4">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                      <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
+                      <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
+                      <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
+                      <g:submitButton name="submit" class="btn-form" value="Buscar"/>
+                  </div>
+                </g:form>
+              <br><br>
 
 
 
 
-        </div><br>
+              <table>
+                  <tr>
+                      <td>Propiedad</td>
+                      <td>Localidad</td>
+                      <td>Barrio</td>
+                      <td>Precio</td>
+                      <td>Descripcion</td>
+                      <td>Tipo Operacion</td>
+                      <td>Tipo Propiedad</td>
+
+                  </tr>
+                  <g:each in="${listado?}">
+                  <tr>
+
+                        <td><g:link action="formularioPropiedad" controller="principal" > ${it.nombre_propiedad}</g:link></td>
+                        <td>${it.localidad}</td>
+                        <td>${it.barrio}</td>
+                        <td>${it.precio}</td>
+                        <td>${it.descripcion}</td>
+                        <td>${it.tipo_operacion}</td>
+                        <td>${it.tipoPropiedad.nombre_tipo}</td>
+
+                  </tr>
+                  </g:each>
+              </table>
+
+
+
+
+              </div><br>
 
 
     </body>

@@ -17,7 +17,7 @@
               <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
           </li>
           <li>
-              <g:link url="[action:'#',controller:'#']">Ofertas </g:link>
+              <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
           </li>
           <li>
               <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
@@ -40,7 +40,7 @@
             <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
         </li>
         <li>
-            <g:link url="[action:'#',controller:'#']">Ofertas </g:link>
+            <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
         </li>
         <li class="dropdown">
             <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
