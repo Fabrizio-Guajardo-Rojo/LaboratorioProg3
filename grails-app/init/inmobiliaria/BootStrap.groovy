@@ -4,7 +4,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-
+    /*
       def usuario1 = new Usuario(nombreUsuario: "Daniel" ,password: "12345",email: "daniel@gmail.com")
       if(!usuario1.save(flush: true)) {
         usuario1.errors.each{
@@ -47,7 +47,7 @@ class BootStrap {
           println it
         }
       }
-
+      */
 
 
 

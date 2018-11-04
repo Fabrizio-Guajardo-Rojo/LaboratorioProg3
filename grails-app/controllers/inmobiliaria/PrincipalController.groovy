@@ -2,31 +2,49 @@ package inmobiliaria
 
 class PrincipalController {
 
-def principalService
+    def principalService
 
-def index() {
-  render(view: "/index")
-}
+    def index() {
+      render(view: "/index")
+    }
 
 
+    def propiedades(){
+    [listado: principalService.listarPropiedades() ]
+    }
 
-def propiedades(){
-  render (view: "Propiedades")
-}
+    def propiedadesOfertas(){
+      [listado: principalService.listarPropiedadesOfertas() ]
+    }
 
-def opcionesGenerales(){
-  render (view: "opcionesGenerales")
-}
+    // esto es para buscar por tipo_operacion, barrio y localidad
 
-//FORMULARIO
-def contacto(){
-  [contacto: new Formulario()]
-  render (view: "contacto")
-}
+        def propiedadesBarrioLocalidad(){
+        [listaPropiedad1: principalService.propiedadesBarrioLocalidad(params.tipo_operacion, params.localidad, params.barrio)]
+    }
 
-def contactoGuardarAlta() {
-  principalService.altaContacto(params)
-  render (view: "/index")
-}
+        def propiedadesBarrioLocalidadOferta(){
+        [listaPropiedad2: principalService.propiedadesBarrioLocalidadOferta(params.tipo_operacion, params.localidad, params.barrio)]
+    }
+
+    def opcionesGenerales(){
+      render (view: "opcionesGenerales")
+    }
+
+    //FORMULARIO
+    def contacto(){
+      [contacto: new Formulario()]
+      render (view: "contacto")
+    }
+
+    def contactoGuardarAlta() {
+      principalService.altaContacto(params)
+      render (view: "/index")
+    }
+
+
+    def formularioPropiedad(){
+      render (view:"formularioPropiedad")
+    }
 
 }
