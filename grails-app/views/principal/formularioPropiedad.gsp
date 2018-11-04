@@ -67,19 +67,12 @@
         <!--aqui es una tabla de todas las propiedades  -->
         <div class="container-fluid bg-3 text-center">
 
-          <g:form action="propiedadesBarrioLocalidad" class="form-wrap mt-4">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
-                <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
-                <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
-                <g:submitButton name="submit" class="btn-form" value="Buscar"/>
-            </div>
-          </g:form>
+
         <br><br>
 
 
-
-
+        <h2>Detalles de la Propiedad</h2>
+        <br><br>
         <table>
             <tr>
                 <td>Propiedad</td>
@@ -91,18 +84,36 @@
                 <td>Tipo Propiedad</td>
 
             </tr>
+            <!--
             <tr>
-
-                  <td><g:link action="formularioPropiedad" controller="principal"> ${it.nombre_propiedad}</g:link></td>
-                  <td>${it.localidad}</td>
-                  <td>${it.barrio}</td>
-                  <td>${it.precio}</td>
-                  <td>${it.descripcion}</td>
-                  <td>${it.tipo_operacion}</td>
-                  <td>${it.tipoPropiedad.nombre_tipo}</td>
-
             </tr>
+          -->
         </table>
+
+
+        <br><br><br>
+
+        <h2>Formulario</h2><br>
+        <div class="row">
+          <g:form name="#" action="#">
+          <br><br>
+            <label for="nombre_formulario">Nombre:</label> <input type="text" id="nombre_formulario" name="nombre_formulario"/>
+          <br><br>
+            <label for="apellido_formulario">Apeillido:</label> <input type="text" id="apellido_formulario" name="apellido_formulario"/>
+          <br><br>
+            <label for="telefono_formulario">Telefono:</label> <input type="text" id="telefono_formulario" name="telefono_formulario"/>
+          <br><br>
+            <label for="domicilio_formulario">Domicilio:</label> <input type="text" id="domicilio_formulario" name="domicilio_formulario"/>
+          <br><br>
+            <label for="email_formulario">Email:</label> <input type="text" id="email_formulario" name="email_formulario"/>
+          <br><br>
+            <label for="detalle_formulario">Mensaje / Consulta:</label> <textarea class="form-control" rows="5" id="detalle_formulario" name="detalle_formulario"></textarea>
+          <br><br>
+          <input type="submit" class="btn btn-default" name="enviar" value="Enviar Formulario"/>
+          <br><br>
+          <button type="reset" class="btn btn-default">Borrar Datos<button/>
+          </g:form>
+        </div>
 
 
 
