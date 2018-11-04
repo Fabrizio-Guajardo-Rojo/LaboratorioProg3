@@ -11,7 +11,7 @@ class FormularioController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond formularioService.list(params), model:[formularioCount: formularioService.count()]
+        respond formularioService.formularioMostrar(), model:[formularioCount: formularioService.count()]
     }
 
     def show(Long id) {

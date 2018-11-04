@@ -11,7 +11,7 @@ class FormularioPropiedadController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond formularioPropiedadService.list(params), model:[formularioPropiedadCount: formularioPropiedadService.count()]
+        respond formularioPropiedadService.formularioMostrar(), model:[formularioPropiedadCount: formularioPropiedadService.count()]
     }
 
     def show(Long id) {

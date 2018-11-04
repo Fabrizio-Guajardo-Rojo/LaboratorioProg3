@@ -2,17 +2,14 @@ package inmobiliaria
 
 import grails.gorm.services.Service
 
-@Service(FormularioPropiedad)
-interface FormularioPropiedadService {
+@Service(Formulario)
+abstract class FormularioPropiedadService implements IFormularioPropiedadService{
 
-    FormularioPropiedad get(Serializable id)
+   List formularioMostrar(){
 
-    List<FormularioPropiedad> list(Map args)
+   def formulario = FormularioPropiedad.findAllByEstado("no contestada")
+   return formulario
+   }
 
-    Long count()
-
-    void delete(Serializable id)
-
-    FormularioPropiedad save(FormularioPropiedad formularioPropiedad)
 
 }
