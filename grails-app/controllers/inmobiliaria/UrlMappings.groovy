@@ -10,7 +10,18 @@ class UrlMappings {
         }
 
         "/"(view:"/index")
-        "/propiedadesInfo"(resources:"apiPropiedades")
+        "/propiedadesInfo"(resources:"apiPropiedades"){
+
+          collection {"/lisApiPropiedadesPorTipoOperacion"(controller: "apiPropiedades", action:
+          "lisApiPropiedadesPorTipoOperacion")
+          }
+          collection {"/lisApiPropiedadesPorTipoPublicidad"(controller: "apiPropiedades", action:
+          "lisApiPropiedadesPorTipoPublicidad")
+          }
+        }
+
+
+
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
