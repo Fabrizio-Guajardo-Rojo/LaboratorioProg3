@@ -55,7 +55,6 @@
         <div class="jumbotron">
           <div class="container text-center">
             <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
-            <p>Some text that represents "Me"...</p>
 
           </div>
         </div>
@@ -69,35 +68,41 @@
 
 
         <br><br>
+        <div class="container">
+          <div class="container text-center">
+            <h2 class="tamanioLetra2">Detalles de la Propiedad</h2>
+            <br>
+            <table class="table">
+               <tr class="success">    <td><p class="tamanioLetra">Propiedad</p></td> <td><p class="tamanioLetra">${propiedad.nombre_propiedad}</p></td> </tr>
+               <tr class="info">       <td><p class="tamanioLetra">Localidad</p></td>  <td><p class="tamanioLetra">${propiedad.localidad}</p></td>  </tr>
+               <tr class="success">    <td><p class="tamanioLetra">Barrio</p></td><td><p class="tamanioLetra">${propiedad.barrio}</p></td> </tr>
+               <tr class="info">       <td><p class="tamanioLetra">Precio</p></td><td><p class="tamanioLetra">${propiedad.precio}</p></td> </tr>
+               <tr class="success">    <td><p class="tamanioLetra">Calle</p></td> <td><p class="tamanioLetra">${propiedad.tipo_operacion}</p></td></tr>
+               <tr class="info">       <td><p class="tamanioLetra">Tipo Propiedad</p></td> <td><p class="tamanioLetra">${propiedad.tipoPropiedad.nombre_tipo}</p></td> </tr>
+               <tr class="success">    <td><p class="tamanioLetra">Calle</p></td> <td><p class="tamanioLetra">${propiedad.calle}</p></td> </tr>
+               <tr class="info">       <td><p class="tamanioLetra">Numero Calle</p></td> <td><p class="tamanioLetra">${propiedad.numeroCalle}</p></td> </tr>
+               <tr class="success">    <td><p class="tamanioLetra">Numero Departamento</p></td> <td><p class="tamanioLetra">${propiedad.numeroDepartamento}</p></td> </tr>
+               <tr class="info">       <td><p class="tamanioLetra">Piso Departamento</p></td> <td><p class="tamanioLetra">${propiedad.piso}</p></td> </tr>
+               <tr class="success">    <td><p class="tamanioLetra">Cant. Habitaciones</p></td> <td><p class="tamanioLetra">${propiedad.cantidadHabitaciones}</p></td> </tr>
+               <tr class="info">       <td><p class="tamanioLetra">Cant. Baños</p></td> <td><p class="tamanioLetra">${propiedad.cantidadBanios}</p></td> </tr>
+               <tr class="success">    <td><p class="tamanioLetra">Descripcion</p></td> <td><p class="tamanioLetra">${propiedad.descripcion}</p></td> </tr>
+
+            </table>
+          </div>
+        </div>
 
 
-        <h2>Detalles de la Propiedad</h2>
-        <br><br>
-        <table>
-              <tr> <td>Propiedad</td> <td>${propiedad.nombre_propiedad}</td> </tr>
-
-
-            
-               <tr>       <td>Localidad</td>  <td>${propiedad.localidad}</td>  </tr>
-               <tr>       <td>Barrio</td><td>${propiedad.barrio}</td> </tr>
-               <tr>       <td>Precio</td><td>${propiedad.precio}</td> </tr>
-               
-               <tr>       <td>Tipo Operacion</td> <td>${propiedad.tipo_operacion}</td></tr>
-               <tr>        <td>Tipo Propiedad</td> <td>${propiedad.tipoPropiedad.nombre_tipo}</td> </tr>
-               <tr>       <td>Descripcion</td> <td>${propiedad.descripcion}</td> </tr>
-          
-        </table>
 
 
         <br><br><br>
 
-        <h2>Formulario</h2><br>
+        <h2 class="tamanioLetra2">Formulario</h2><br>
         <div class="row">
           <g:form name="formularioPropiededad" action="formularioPropiedadGuardarAlta">
-          
+
 
           <br><br>
-          <label for="propiedad">pripiedad de la consulta</label>
+          <label for="propiedad">Propiedad de la consulta</label>
           <select id ="propiedad" name="propiedad">
             <option>
             ${propiedad.id}

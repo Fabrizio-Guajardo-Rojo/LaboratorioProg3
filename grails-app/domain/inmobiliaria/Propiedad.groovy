@@ -26,9 +26,9 @@ class Propiedad {
 
 
 	String descripcion;
-	String tipo_operacion; // debe tener un tipo diferente para "casas (c),departamentos(d) , locales (l), etc"
-	String estado_propiedad; // si esta alquilada o vendida , o libre
-	String tipo_publicidad;
+	String tipo_operacion;
+	String estado_propiedad;
+	String tipo_publicidad;	
 
 	static belongsTo = [cliente_dueño: ClienteVendedor , tipoPropiedad:TipoPropiedad ]  // falta agregar el "static hasMany = [propiedades: Propiedad]"
 

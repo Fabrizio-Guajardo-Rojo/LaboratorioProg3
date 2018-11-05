@@ -55,7 +55,6 @@
         <div class="jumbotron">
           <div class="container text-center">
             <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
-            <p>Some text that represents "Me"...</p>
 
           </div>
         </div>
@@ -67,7 +66,7 @@
         <g:if test="${flash.message}">
           <div class="message" role="status">${flash.message}</div>
         </g:if>
-        
+
           <g:form action="propiedadesBarrioLocalidadOferta" class="form-wrap mt-4">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
