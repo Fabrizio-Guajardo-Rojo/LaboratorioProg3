@@ -1,5 +1,5 @@
 package inmobiliaria
-
+import inmobiliaria.Propiedad
 class PrincipalController {
 
     def principalService
@@ -49,9 +49,15 @@ class PrincipalController {
       render (view: "/index")
     }
 
-
+/* esta linea de abajo esta dando error */
     def formularioPropiedad(){
-      render (view: "formularioPropiedad")
+      def propiedadEncontrada=Propiedad.get(params.id) 
+      render (view: "formularioPropiedad",model:[propiedad:propiedadEncontrada])
+    }
+
+    def formularioPropiedadGuardarAlta(){
+      principalService.altaformularioPropiedad(params)
+      render (view: "/index")
     }
 
 }

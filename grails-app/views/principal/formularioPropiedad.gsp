@@ -74,20 +74,18 @@
         <h2>Detalles de la Propiedad</h2>
         <br><br>
         <table>
-            <tr>
-                <td>Propiedad</td>
-                <td>Localidad</td>
-                <td>Barrio</td>
-                <td>Precio</td>
-                <td>Descripcion</td>
-                <td>Tipo Operacion</td>
-                <td>Tipo Propiedad</td>
+              <tr> <td>Propiedad</td> <td>${propiedad.nombre_propiedad}</td> </tr>
 
-            </tr>
-            <!--
-            <tr>
-            </tr>
-          -->
+
+            
+               <tr>       <td>Localidad</td>  <td>${propiedad.localidad}</td>  </tr>
+               <tr>       <td>Barrio</td><td>${propiedad.barrio}</td> </tr>
+               <tr>       <td>Precio</td><td>${propiedad.precio}</td> </tr>
+               
+               <tr>       <td>Tipo Operacion</td> <td>${propiedad.tipo_operacion}</td></tr>
+               <tr>        <td>Tipo Propiedad</td> <td>${propiedad.tipoPropiedad.nombre_tipo}</td> </tr>
+               <tr>       <td>Descripcion</td> <td>${propiedad.descripcion}</td> </tr>
+          
         </table>
 
 
@@ -95,8 +93,23 @@
 
         <h2>Formulario</h2><br>
         <div class="row">
-          <g:form name="#" action="#">
+          <g:form name="formularioPropiededad" action="formularioPropiedadGuardarAlta">
+          
+
           <br><br>
+          <label for="propiedad">pripiedad de la consulta</label>
+          <select id ="propiedad" name="propiedad">
+            <option>
+            ${propiedad.id}
+            </option>
+          </select>
+          <br><br>
+
+<!--
+          <label for="propiedad">pripiedad de la consulta</label>
+          <label id ="propiedad" name="propiedad">${propiedad.id}</label>
+          <br><br>
+-->
             <label for="nombre_formulario">Nombre:</label> <input type="text" id="nombre_formulario" name="nombre_formulario"/>
           <br><br>
             <label for="apellido_formulario">Apeillido:</label> <input type="text" id="apellido_formulario" name="apellido_formulario"/>
@@ -109,8 +122,11 @@
           <br><br>
             <label for="detalle_formulario">Mensaje / Consulta:</label> <textarea class="form-control" rows="5" id="detalle_formulario" name="detalle_formulario"></textarea>
           <br><br>
+
           <input type="submit" class="btn btn-default" name="enviar" value="Enviar Formulario"/>
           <br><br>
+
+
           <button type="reset" class="btn btn-default">Borrar Datos<button/>
           </g:form>
         </div>

@@ -19,6 +19,6 @@ class FormularioPropiedad {
       telefono_formulario (blank:false, maxSize:16)
       email_formulario (blank:false , email:true)
       detalle_formulario (blank:false, maxSize: 300)
-      estado( blank:true,inList:['no contestada','contestada'])
+      estado( blank:false,inList:['no contestada','contestada'])
     }
 }

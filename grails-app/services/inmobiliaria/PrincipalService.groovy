@@ -111,4 +111,18 @@ class PrincipalService {
 
   }
 
+
+
+//no esta guardando el formulario propiedad
+  void altaformularioPropiedad(Map params){
+        try {
+        def formularioPropiedad = new FormularioPropiedad(params)
+        formularioPropiedad.setEstado("no contestada")
+        formularioPropiedad.save(flush:true)
+    } catch (ValidationException e) {
+        respond contacto.errors, view:'formularioPropiedad'
+        return
+    }
+  }
+
 }
