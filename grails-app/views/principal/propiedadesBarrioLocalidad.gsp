@@ -63,6 +63,11 @@
 
 
         <div class="container bg-3 text-center">
+
+        <g:if test="${flash.message}">
+          <div class="message" role="status">${flash.message}</div>
+        </g:if>
+
           <g:form action="propiedadesBarrioLocalidad" class="form-wrap mt-4">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <g:field type="text" placeholder="venta/alquiler" name="tipo_operacion" class="btn-group1"/>

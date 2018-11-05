@@ -18,12 +18,19 @@ class PrincipalController {
     }
 
     // esto es para buscar por tipo_operacion, barrio y localidad
-
-        def propiedadesBarrioLocalidad(){
+    def propiedadesBarrioLocalidad(){
+        if(!params.tipo_operacion && !params.localidad && !params.barrio) {
+          flash.message="Debe ingresar un tipo_operacion/localidad/barrio"
+          render(view: 'propiedadesBarrioLocalidad')
+        }
         [listaPropiedad1: principalService.propiedadesBarrioLocalidad(params.tipo_operacion, params.localidad, params.barrio)]
     }
 
-        def propiedadesBarrioLocalidadOferta(){
+    def propiedadesBarrioLocalidadOferta(){
+        if(!params.tipo_operacion && !params.localidad && !params.barrio) {
+          flash.message="Debe ingresar un tipo_operacion/localidad/barrio"
+          render(view: 'propiedadesBarrioLocalidadOferta')
+        }
         [listaPropiedad2: principalService.propiedadesBarrioLocalidadOferta(params.tipo_operacion, params.localidad, params.barrio)]
     }
 
