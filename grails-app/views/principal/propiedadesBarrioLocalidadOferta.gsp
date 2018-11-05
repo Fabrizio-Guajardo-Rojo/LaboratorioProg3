@@ -93,7 +93,7 @@
                     <g:each in="${listaPropiedad2?}">
                     <tr>
 
-                          <td><g:link action="formularioPropiedad" controller="principal"> ${it.nombre_propiedad}</g:link></td>
+                          <td><g:link action="formularioPropiedad" controller="principal" id="${it.id}" > ${it.nombre_propiedad}</g:link></td>
                           <td>${it.localidad}</td>
                           <td>${it.barrio}</td>
                           <td>${it.precio}</td>
