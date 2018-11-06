@@ -54,7 +54,7 @@
         <div class="jumbotron">
           <div class="container text-center">
             <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
-        
+
           </div>
         </div>
 
@@ -67,7 +67,7 @@
                       <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
                       <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
                       <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
-                      <g:submitButton name="submit" class="btn-form" value="Buscar"/>
+                      <g:submitButton name="submit" class="btn-form btn-success" value="Buscar"/>
                   </div>
                 </g:form>
               <br><br>
@@ -75,7 +75,7 @@
 
 
 
-              <table>
+              <table class="table-bordered">
 
                   <tr>
                       <td>Propiedad</td>
@@ -90,7 +90,7 @@
                   <g:each in="${listado?}">
                   <tr>
 
-                        <td><g:link action="formularioPropiedad" controller="principal" id="${it.id}" > ${it.nombre_propiedad}</g:link></td>
+                        <td><g:link class="btn btn-primary" action="formularioPropiedad" controller="principal" id="${it.id}" > ${it.nombre_propiedad}</g:link></td>
                         <td>${it.localidad}</td>
                         <td>${it.barrio}</td>
                         <td>${it.precio}</td>

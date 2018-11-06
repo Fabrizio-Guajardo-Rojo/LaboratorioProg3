@@ -53,6 +53,7 @@
 
         <div class="jumbotron">
           <div class="container text-center">
+            <asset:image src="fondoPagina.jpg" class="grails-logo"/>
             <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
 
           </div>

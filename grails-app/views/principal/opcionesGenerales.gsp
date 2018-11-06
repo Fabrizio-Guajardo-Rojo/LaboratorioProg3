@@ -61,15 +61,15 @@
 
         <div class="container-fluid bg-3 text-center">
           <h2> Opciones Generales</h2>
-          <ul>
-            <li><g:link controller="clienteComprador" action="index">ABM Clientes Comprador</g:link></li>
-            <li><g:link controller="clienteVendedor" action="index">ABM Clientes vendedor</g:link></li>
-            <li><g:link controller="propiedad" action="index">ABM Propiedades </g:link></li>
-            <li><g:link controller="tipoPropiedad" action="index">Agragar tipo de propiedad</g:link></li>
-            <li><g:link controller="contrato" action="index">ABM CONTRATOS</g:link></li>
-            <li><g:link controller="usuario" action="index">ABM USUARIOS </g:link></li>
-            <li><g:link controller="formulario" action="index">Ver Consultas Pendientes de posibles vendedores</g:link></li>
-            <li><g:link controller="formularioPropiedad" action="index">Ver Consultas Pendientes Propiedad</g:link></li>
+          <ul class="lista">
+            <li class="claseli"><g:link controller="clienteComprador" action="index" class="btn btn-primary">ABM Clientes Comprador</g:link></li>
+            <li class="claseli"><g:link controller="clienteVendedor" action="index" class="btn btn-primary">ABM Clientes vendedor</g:link></li>
+            <li class="claseli"><g:link controller="propiedad" action="index" class="btn btn-primary">ABM Propiedades </g:link></li>
+            <li class="claseli"><g:link controller="tipoPropiedad" action="index" class="btn btn-primary">Agragar tipo de propiedad</g:link></li>
+            <li class="claseli"><g:link controller="contrato" action="index" class="btn btn-primary">ABM CONTRATOS</g:link></li>
+            <li class="claseli"><g:link controller="usuario" action="index" class="btn btn-primary">ABM USUARIOS </g:link></li>
+            <li class="claseli"><g:link controller="formulario" action="index" class="btn btn-primary">Ver Consultas Pendientes de posibles vendedores</g:link></li>
+            <li class="claseli"><g:link controller="formularioPropiedad" action="index" class="btn btn-primary">Ver Consultas Pendientes Propiedad</g:link></li>
         </ul>
 
         </div><br>

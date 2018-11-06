@@ -72,13 +72,13 @@
                 <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
                 <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
                 <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
-                <g:submitButton name="submit" class="btn-form" value="Buscar"/>
+                <g:submitButton name="submit" class="btn-form btn-success" value="Buscar"/>
             </div>
           </g:form>
           <br><br>
-                <h4 class="logo">RESULTADO DE BUSQUEDA </h4>
+                <h4 class="logo">RESULTADO DE BUSQUEDA </h4><br>
 
-                <table>
+                <table class="table-bordered">
                     <tr>
                         <td>Propiedad</td>
                         <td>Localidad</td>
@@ -92,7 +92,7 @@
                     <g:each in="${listaPropiedad2?}">
                     <tr>
 
-                          <td><g:link action="formularioPropiedad" controller="principal" id="${it.id}" > ${it.nombre_propiedad}</g:link></td>
+                          <td><g:link class="btn btn-primary" action="formularioPropiedad" controller="principal" id="${it.id}" > ${it.nombre_propiedad}</g:link></td>
                           <td>${it.localidad}</td>
                           <td>${it.barrio}</td>
                           <td>${it.precio}</td>
