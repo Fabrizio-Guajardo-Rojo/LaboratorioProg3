@@ -29,7 +29,7 @@
                <div class="blog_text">
                  <a><h4>Propiedad: ${it.nombre_propiedad}</h4></a>
 
-                 <p>Tipo Propiedad: ${it.tipoPropiedad.nombre_tipo}<br>Localidad: ${it.localidad}<br>Barrio: ${it.barrio}<br>Calle:  Av. Presidente Castillo<br></p>
+                 <p>Tipo Propiedad: ${it.tipoPropiedad.nombre_tipo}<br>Localidad: ${it.localidad}<br>Barrio: ${it.barrio}<br>Calle:  Av. Presidente Castillo<br>Detalle: ${it.tipo_publicidad}<br></p>
                  <p><span>Precio</span>: $${it.precio}</p>
                  <p><span>Tipo Operacion</span>: ${it.tipo_operacion}</p>
                  <g:link class="banner_btn" action="formularioPropiedad" controller="principal" id="${it.id}" >Ver Detalles</g:link>

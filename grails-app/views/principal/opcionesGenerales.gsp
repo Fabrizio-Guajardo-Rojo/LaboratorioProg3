@@ -64,11 +64,10 @@
             <li class="claseli"><g:link controller="clienteComprador" action="index" class="btn btn-primary">ABM Clientes Comprador</g:link></li>
             <li class="claseli"><g:link controller="clienteVendedor" action="index" class="btn btn-primary">ABM Clientes vendedor</g:link></li>
             <li class="claseli"><g:link controller="propiedad" action="index" class="btn btn-primary">ABM Propiedades </g:link></li>
-            <li class="claseli"><g:link controller="tipoPropiedad" action="index" class="btn btn-primary">Agragar tipo de propiedad</g:link></li>
+            <li class="claseli"><g:link controller="tipoPropiedad" action="index" class="btn btn-primary">ABM tipo de propiedad</g:link></li>
             <li class="claseli"><g:link controller="contrato" action="index" class="btn btn-primary">ABM CONTRATOS</g:link></li>
-            <li class="claseli"><g:link controller="usuario" action="index" class="btn btn-primary">ABM USUARIOS </g:link></li>
-            <li class="claseli"><g:link controller="formulario" action="index" class="btn btn-primary">Ver Consultas Pendientes de posibles vendedores</g:link></li>
-            <li class="claseli"><g:link controller="formularioPropiedad" action="index" class="btn btn-primary">Ver Consultas Pendientes Propiedad</g:link></li>
+            <li class="claseli"><g:link controller="formulario" action="index" class="btn btn-primary">Ver Consultas Pendientes</g:link></li>
+            <li class="claseli"><g:link controller="formularioPropiedad" action="index" class="btn btn-primary">Ver Consultas Pendientes de PROPIEDADES</g:link></li>
         </ul>
 
         </div><br>
