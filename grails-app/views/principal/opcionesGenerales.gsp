@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta name="layout" content="main"/>
+        <meta name="layout" content="main2"/>
         <title>Inmobiliaria</title>
     </head>
     <body>
@@ -54,13 +54,12 @@
 
         <div class="jumbotron">
           <div class="container text-center">
-            <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
+            <h1>Opciones de Administración</h1>
           </div>
         </div>
 
 
         <div class="container-fluid bg-3 text-center">
-          <h2> Opciones Generales</h2>
           <ul class="lista">
             <li class="claseli"><g:link controller="clienteComprador" action="index" class="btn btn-primary">ABM Clientes Comprador</g:link></li>
             <li class="claseli"><g:link controller="clienteVendedor" action="index" class="btn btn-primary">ABM Clientes vendedor</g:link></li>

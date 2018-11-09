@@ -70,7 +70,7 @@
             <div class="banner_inner">
                 <div class="container">
                     <div class="banner_content text-center">
-                        <h2>Bienvenidos a <br />Best-Inmobiliaria</h2>
+                        <h2>Best-Inmobiliaria</h2>
                     </div>
                 </div>
             </div>

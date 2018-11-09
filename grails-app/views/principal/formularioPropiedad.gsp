@@ -1,105 +1,107 @@
 <!doctype html>
     <html>
     <head>
-        <meta name="layout" content="main"/>
+        <meta name="layout" content="main3"/>
         <title>Inmobiliaria</title>
     </head>
     <body>
-      <g:if test="${session!=null && session.usuario!=null}">
-      <content tag="nav">
-          <li>
-              <a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: ${session?.usuario?.nombreUsuario}</a>
-          </li>
-          <li>
-            <g:link url="[action:'index',controller:'principal']">Inicio </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
-          </li>
-          <li>
-              <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'opcionesGenerales',controller:'principal']">Administracion </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'logout',controller:'login']">Cerrar Sesion </g:link> </a>
-          </li>
-      </content>
-    </g:if>
 
-    <g:else>
-      <content tag="nav">
-        <li class="dropdown">
-          <g:link url="[action:'index',controller:'principal']">Inicio </g:link>
-        </li>
-        <li class="dropdown">
-            <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
-        </li>
-        <li>
-            <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
-        </li>
-        <li class="dropdown">
-            <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
-        </li>
-        <li class="dropdown">
-            <g:link url="[action:'login',controller:'login']">Inicio Sesion </g:link> </a>
-        </li>
-      </content>
-    </g:else>
+        <section class="portfolio_details_area p_120">
+              	<div class="container">
+              		<div class="portfolio_details_inner">
+                    <div class="container text-center">
+                      <h4 class="letra1">Detalles de la Propiedad</h4><br><br><br><br>
+                    </div>
+
+      					<div class="row">
+      						<div class="col-md-6">
+      							<div class="left_img">
+      								<asset:image src="imagenCasa.jpg"/>
+      							</div>
+      						</div>
+      						<div class="col-md-6">
+      							<div class="portfolio_right_text">
+      								<h4>${propiedad.nombre_propiedad}</h4>
+      								<ul class="list">
+      									<li><h5 class="span1">Tipo Propiedad: ${propiedad.tipoPropiedad.nombre_tipo}</h5></li>
+      									<li><h5 class="span1">Localidad: ${propiedad.localidad}</h5></li>
+      									<li><h5 class="span1">Barrio: ${propiedad.barrio}</h5></li>
+      									<li><h5 class="span1">Calle: ${propiedad.calle}</h5></li>
+                        <li><h5 class="span1">Num. Calle: ${propiedad.numeroCalle}</h5></li>
+      									<li><h5 class="span1">Precio: $${propiedad.precio}</h5></li>
+      									<li><h5 class="span1">Tipo Operación: ${propiedad.tipo_operacion}</h5></li>
+                        <li><h5 class="span1">Num. Departamento: ${propiedad.numeroDepartamento}</h5></li>
+                        <li><h5 class="span1">Piso Departamento: ${propiedad.piso}</h5></li>
+                        <li><h5 class="span1">Cant. Habitaciones: ${propiedad.cantidadHabitaciones}</h5></li>
+                        <li><h5 class="span1">Cant. Baños: ${propiedad.cantidadBanios}</h5></li>
+                      </ul>
+      							</div>
+      						</div>
+      					</div>
+                  	<div class="portfolio_right_text">
+                      <ul class="list">
+                        <li><h5 class="span2">Descripcion: ${propiedad.descripcion}</h5></li><br>
+                      </ul>
+                    </div>
+
+              		</div>
+              	</div>
+            </section>
+            <br><br><br>
+
+            <!--================Contact Area =================-->
+            <div class="container text-center">
+              <h4 class="letra1">Formulario de Contacto</h4>
+            </div>
+            <section class="contact_area p_120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 comment-form">
+                            <g:form class="row contact_form" novalidate="novalidate" name="formularioPropiededad" action="formularioPropiedadGuardarAlta">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre_formulario">Nombre:</label><input type="text" class="form-control" id="nombre_formulario" name="nombre_formulario" placeholder="Ingrese Nombre"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="apellido_formulario">Apeillido:</label><input type="text" class="form-control" id="apellido_formulario" name="apellido_formulario" placeholder="Ingrese Apellido"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono_formulario">Telefono:</label> <input type="text" class="form-control" id="telefono_formulario" name="telefono_formulario" placeholder="Ingrese Telefono"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="domicilio_formulario">Domicilio:</label> <input type="text" class="form-control" id="domicilio_formulario" name="domicilio_formulario" placeholder="Ingrese Domicilio"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email_formulario">Email:</label> <input type="text" class="form-control" id="email_formulario" name="email_formulario" placeholder="Mensaje"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="detalle_formulario">Mensaje / Consulta:</label><textarea class="form-control" id="detalle_formulario" name="detalle_formulario" rows="1" placeholder="Mensaje"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" value="submit" class="banner_btn">Enviar Formulario</button>
+                                </div>
+                            </g:form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--================Contact Area =================-->
 
 
-        <div class="jumbotron">
-          <div class="container text-center">
-            <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
-
-          </div>
-        </div>
 
 
+        <!-- ANTIGUO FORMULARIO
 
 
-
-        <!--aqui es una tabla de todas las propiedades  -->
         <div class="container-fluid bg-3 text-center">
-
-
-        <br><br>
-        <div class="container">
-          <div class="container text-center">
-            <h2 class="tamanioLetra2">Detalles de la Propiedad</h2>
-            <br>
-            <table class="table">
-               <tr class="success">    <td><p class="tamanioLetra">Propiedad</p></td> <td><p class="tamanioLetra">${propiedad.nombre_propiedad}</p></td> </tr>
-               <tr class="info">       <td><p class="tamanioLetra">Localidad</p></td>  <td><p class="tamanioLetra">${propiedad.localidad}</p></td>  </tr>
-               <tr class="success">    <td><p class="tamanioLetra">Barrio</p></td><td><p class="tamanioLetra">${propiedad.barrio}</p></td> </tr>
-               <tr class="info">       <td><p class="tamanioLetra">Precio</p></td><td><p class="tamanioLetra">${propiedad.precio}</p></td> </tr>
-               <tr class="success">    <td><p class="tamanioLetra">Calle</p></td> <td><p class="tamanioLetra">${propiedad.tipo_operacion}</p></td></tr>
-               <tr class="info">       <td><p class="tamanioLetra">Tipo Propiedad</p></td> <td><p class="tamanioLetra">${propiedad.tipoPropiedad.nombre_tipo}</p></td> </tr>
-               <tr class="success">    <td><p class="tamanioLetra">Calle</p></td> <td><p class="tamanioLetra">${propiedad.calle}</p></td> </tr>
-               <tr class="info">       <td><p class="tamanioLetra">Numero Calle</p></td> <td><p class="tamanioLetra">${propiedad.numeroCalle}</p></td> </tr>
-               <tr class="success">    <td><p class="tamanioLetra">Numero Departamento</p></td> <td><p class="tamanioLetra">${propiedad.numeroDepartamento}</p></td> </tr>
-               <tr class="info">       <td><p class="tamanioLetra">Piso Departamento</p></td> <td><p class="tamanioLetra">${propiedad.piso}</p></td> </tr>
-               <tr class="success">    <td><p class="tamanioLetra">Cant. Habitaciones</p></td> <td><p class="tamanioLetra">${propiedad.cantidadHabitaciones}</p></td> </tr>
-               <tr class="info">       <td><p class="tamanioLetra">Cant. Baños</p></td> <td><p class="tamanioLetra">${propiedad.cantidadBanios}</p></td> </tr>
-               <tr class="success">    <td><p class="tamanioLetra">Descripcion</p></td> <td><p class="tamanioLetra">${propiedad.descripcion}</p></td> </tr>
-
-            </table>
-          </div>
-        </div>
-
-
-
-
         <br><br><br>
 
         <h2 class="tamanioLetra2">Formulario</h2><br>
         <div class="row">
           <g:form name="formularioPropiededad" action="formularioPropiedadGuardarAlta">
-
 
           <br><br>
           <label for="propiedad">Propiedad de la consulta</label>
@@ -110,11 +112,11 @@
           </select>
           <br><br>
 
-<!--
+
           <label for="propiedad">pripiedad de la consulta</label>
           <label id ="propiedad" name="propiedad">${propiedad.id}</label>
           <br><br>
--->
+
             <label for="nombre_formulario">Nombre:</label> <input type="text" id="nombre_formulario" name="nombre_formulario"/>
           <br><br>
             <label for="apellido_formulario">Apeillido:</label> <input type="text" id="apellido_formulario" name="apellido_formulario"/>
@@ -131,17 +133,12 @@
           <input type="submit" class="btn btn-default" name="enviar" value="Enviar Formulario"/>
           <br><br>
 
-
-          <button type="reset" class="btn btn-default">Borrar Datos<button/>
           </g:form>
         </div>
 
-
-
-
         </div><br>
 
-
+-->
 
 
     </body>

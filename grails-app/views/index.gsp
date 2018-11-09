@@ -1,110 +1,57 @@
 <!doctype html>
-    <html>
+  <html>
     <head>
-        <meta name="layout" content="main"/>
-        <title>Inmobiliaria</title>
+        <!-- Required meta tags -->
+        <meta name="layout" content="main" />
+
+
     </head>
+
     <body>
-      <g:if test="${session!=null && session.usuario!=null}">
-      <content tag="nav">
-          <li>
-              <a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: ${session?.usuario?.nombreUsuario}</a>
-          </li>
-          <li>
-            <g:link url="[action:'index',controller:'principal']">Inicio </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
-          </li>
-          <li>
-              <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'opcionesGenerales',controller:'principal']">Administracion </g:link>
-          </li>
-          <li>
-              <g:link url="[action:'logout',controller:'login']">Cerrar Sesion </g:link> </a>
-          </li>
-      </content>
-    </g:if>
 
-    <g:else>
-      <content tag="nav">
-        <li class="dropdown">
-          <g:link url="[action:'index',controller:'principal']">Inicio </g:link>
-        </li>
-        <li class="dropdown">
-            <g:link url="[action:'propiedades',controller:'principal']">Propiedades </g:link> </a>
-        </li>
-        <li>
-            <g:link url="[action:'propiedadesOfertas',controller:'principal']">Ofertas </g:link>
-        </li>
-        <li class="dropdown">
-            <g:link url="[action:'contacto',controller:'principal']">Contacto </g:link>
-        </li>
-        <li class="dropdown">
-            <g:link url="[action:'login',controller:'login']">Inicio Sesion </g:link> </a>
-        </li>
-      </content>
-    </g:else>
-
-        <div class="jumbotron">
-          <div class="container text-center">
-            <asset:image src="fondoPagina.jpg" class="grails-logo"/>
-            <h1>BIENVENIDOS A BEST-INMOBILIARIA</h1>
-
-          </div>
-        </div>
-
-        <div class="container-fluid bg-3 text-center">
-          <h3>Lista de Ofertas !!!</h3><br>
-          <div class="row">
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <div class="thumbnail">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" style="height:100%">
+      <section class="blog_categorie_area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4">
+                      <div class="categories_post">
+                          <asset:image src="imagen11.jpg" alt="post"/>
+                          <div class="categories_details">
+                              <div class="categories_text">
+                                  <g:link url="[action:'propiedades',controller:'principal']"><h5>Propiedades</h5></g:link>
+                                  <div class="border_line"></div>
+                                  <p>Vea todas las Propiedades en Venta o Alquiler </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="categories_post">
+                          <asset:image src="imagen22.jpg" alt="post"/>
+                          <div class="categories_details">
+                              <div class="categories_text">
+                                  <g:link url="[action:'propiedadesOfertas',controller:'principal']"><h5>Ofertas</h5></g:link>
+                                  <div class="border_line"></div>
+                                  <p>Vea todas las Ofertas disponibles</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="categories_post">
+                          <asset:image src="imagen33.jpg" alt="post"/>
+                          <div class="categories_details">
+                              <div class="categories_text">
+                                  <g:link url="[action:'contacto',controller:'principal']"><h5>Contacto</h5></g:link>
+                                  <div class="border_line"></div>
+                                  <p>Contactese con Nosotros</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="thumbnail">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" style="height:100%">
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
           </div>
-        </div><br>
-
-        <div class="container-fluid bg-3 text-center">
-          <div class="row">
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-              <p>Some text..</p>
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-          </div>
-        </div><br><br>
+      </section>
 
     </body>
-    </html>
+
+  </html>

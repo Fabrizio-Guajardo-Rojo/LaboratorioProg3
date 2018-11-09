@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="main2" />
         <g:set var="entityName" value="${message(code: 'formulario.label', default: 'Formulario')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
@@ -20,7 +20,7 @@
             </g:if>
 
             <f:table collection="${formularioList}" />
-            
+
             <div class="pagination">
                 <g:paginate total="${formularioCount ?: 0}" />
             </div>
