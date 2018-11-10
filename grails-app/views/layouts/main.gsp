@@ -7,6 +7,7 @@
         <asset:link rel="icon" href="iconoPagina.ico" type="image/x-ico" />
         <title>Inmobiliaria</title>
         <!-- Bootstrap CSS -->
+
         <asset:stylesheet src="bootstrap2.css"/>
         <asset:stylesheet src="style.css"/>
         <asset:stylesheet src="font-awesome.min.css"/>
@@ -98,6 +99,7 @@
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!--<script type="text/javascript" src="/js/codigo.js"></script>-->
         <asset:javascript src="jquery-3.2.1.min.js"/>
         <asset:javascript src="popper.js"/>
         <asset:javascript src="bootstrap.min.js"/>

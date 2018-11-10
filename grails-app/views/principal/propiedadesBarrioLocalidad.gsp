@@ -20,10 +20,17 @@
              <br><br>
              <g:form action="propiedadesBarrioLocalidad">
                <div class="btn-group" role="group" aria-label="Basic example">
-                   <g:field type="text" placeholder="Venta/Alquiler" name="tipo_operacion" class="btn-group1"/>
-                   <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
-                   <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
-                   <g:submitButton name="submit" class="banner_btn" value="Buscar"/>
+                 <select class="btn-group1 estilo1" id ="tipo_operacion" name="tipo_operacion">
+                   <option>
+                     venta
+                   </option>
+                   <option>
+                     alquiler
+                   </option>
+                 </select>
+                 <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1 estilo1"/>
+                 <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1 estilo1"/>
+                 <g:submitButton name="submit" class="banner_btn" value="Buscar"/>
                </div>
              </g:form>
            </div>
